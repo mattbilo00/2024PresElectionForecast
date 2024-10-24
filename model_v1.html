@@ -3,66 +3,131 @@
         <meta charset='utf-8'>
         <meta name="viewportt", content='width=device-width, initial-scale=1.0'>
         <link rel="stylesheet" href="stylesheet.css">
+        <link rel="icon" type="image/png" href="webpage_icon.png">
 
         <Title>2024 Election Forecast</Title>
     </head>
     <body>
         <h1>2024 US Presidential Election Forecast</h1>
         <p id="name">By Matthew Bilopavlovic</p>
-        <p id="last-updated">Last Updated: 23-10-2024, 06:46 PM</p>
+        <p id="last-updated">Last Updated: 24-10-2024, 09:21 AM</p>
 
-        <h2>National polling average</h2>
-        <!-- <img src="national_photo.png" alt="Description of the image", width=800> -->
-        <img src="./v1_images/National.png" alt="National" width="800vw" height="600vh" />
         <div>
-            <h2>Swing States</h2>
-            <img src="./v1_images/pennsylvania.png" alt="Pennsylvania" width="800vw" height="600vh" />
-            <img src="./v1_images/michigan.png" alt="Michigan" width="800vw" height="600vh" />
-            <img src="./v1_images/wisconsin.png" alt="Wisconsin" width="800vw" height="600vh" />
-            <img src="./v1_images/arizona.png" alt="Arizona" width="800vw" height="600vh" />
-            <img src="./v1_images/georgia.png" alt="Georgia" width="800vw" height="600vh" />
-            <img src="./v1_images/north carolina.png" alt="North Carolina" width="800vw" height="600vh" />
-            <img src="./v1_images/nevada.png" alt="Nevada" width="800vw" height="600vh" />
-
-            <h2>Remaining States</h2>
-            <img src="./v1_images/alaska.png" alt="Alaska" width="800vw" height="600vh" />
-            <img src="./v1_images/california.png" alt="California" width="800vw" height="600vh" />
-            <img src="./v1_images/colorado.png" alt="Colorado" width="800vw" height="600vh" />
-            <img src="./v1_images/delaware.png" alt="Delaware" width="800vw" height="600vh" />
-            <img src="./v1_images/florida.png" alt="Florida" width="800vw" height="600vh" />
-            <img src="./v1_images/illinois.png" alt="Illinois" width="800vw" height="600vh" />
-            <img src="./v1_images/indiana.png" alt="Indiana" width="800vw" height="600vh" />
-            <img src="./v1_images/iowa.png" alt="Iowa" width="800vw" height="600vh" />
-            <img src="./v1_images/maine cd-1.png" alt="Maine CD-1" width="800vw" height="600vh" />
-            <img src="./v1_images/maine cd-2.png" alt="Maine CD-2" width="800vw" height="600vh" />
-            <img src="./v1_images/maine.png" alt="Maine" width="800vw" height="600vh" />
-            <img src="./v1_images/maryland.png" alt="Maryland" width="800vw" height="600vh" />
-            <img src="./v1_images/massachusetts.png" alt="Massachusetts" width="800vw" height="600vh" />
-            <img src="./v1_images/minnesota.png" alt="Minnesota" width="800vw" height="600vh" />
-            <img src="./v1_images/missouri.png" alt="Missouri" width="800vw" height="600vh" />
-            <img src="./v1_images/montana.png" alt="Montana" width="800vw" height="600vh" />
-            <img src="./v1_images/nebraska cd-2.png" alt="Nebraska CD-2" width="800vw" height="600vh" />
-            <img src="./v1_images/nebraska.png" alt="Nebraska" width="800vw" height="600vh" />
-            <img src="./v1_images/new hampshire.png" alt="New Hampshire" width="800vw" height="600vh" />
-            <img src="./v1_images/new jersey.png" alt="New Jersey" width="800vw" height="600vh" />
-            <img src="./v1_images/new mexico.png" alt="New Mexico" width="800vw" height="600vh" />
-            <img src="./v1_images/new york.png" alt="New York" width="800vw" height="600vh" />
-            <img src="./v1_images/north dakota.png" alt="North Dakota" width="800vw" height="600vh" />
-            <img src="./v1_images/ohio.png" alt="Ohio" width="800vw" height="600vh" />
-            <img src="./v1_images/oklahoma.png" alt="Oklahoma" width="800vw" height="600vh" />
-            <img src="./v1_images/oregon.png" alt="Oregon" width="800vw" height="600vh" />
-            <img src="./v1_images/rhode island.png" alt="Rhode Island" width="800vw" height="600vh" />
-            <img src="./v1_images/south carolina.png" alt="South Carolina" width="800vw" height="600vh" />
-            <img src="./v1_images/tennessee.png" alt="Tennessee" width="800vw" height="600vh" />
-            <img src="./v1_images/texas.png" alt="Texas" width="800vw" height="600vh" />
-            <img src="./v1_images/utah.png" alt="Utah" width="800vw" height="600vh" />
-            <img src="./v1_images/vermont.png" alt="Vermont" width="800vw" height="600vh" />
-            <img src="./v1_images/virginia.png" alt="Virginia" width="800vw" height="600vh" />
-            <img src="./v1_images/washington.png" alt="Washington" width="800vw" height="600vh" />
-            <img src="./v1_images/west virginia.png" alt="West Virginia" width="800vw" height="600vh" />
+            <a href="index.html">Main Page</a>
         </div>
 
-        
+        <div class="content-container">
+            
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <ul>
+                    <li><a href="#national">Popular Vote</a></li>
+                    <h3>Swing States</h3>
+                    <li><a href="#pennsylvania">Pennsylvania</a></li>
+                    <li><a href="#michigan">Michigan</a></li>
+                    <li><a href="#wisconsin">Wisconsin</a></li>
+                    <li><a href="#arizona">Arizona</a></li>
+                    <li><a href="#georgia">Georgia</a></li>
+                    <li><a href="#north-carolina">North Carolina</a></li>
+                    <li><a href="#nevada">Nevada</a></li>
+
+                    <h3>Remaining States</h3>
+                    <li><a href="#alaska">Alaska</a></li>
+                    <li><a href="#california">California</a></li>
+                    <li><a href="#colorado">Colorado</a></li>
+                    <li><a href="#delaware">Delaware</a></li>
+                    <li><a href="#florida">Florida</a></li>
+                    <li><a href="#illinois">Illinois</a></li>
+                    <li><a href="#indiana">Indiana</a></li>
+                    <li><a href="#iowa">Iowa</a></li>
+                    <li><a href="#maine-cd-1">Maine CD-1</a></li>
+                    <li><a href="#maine-cd-2">Maine CD-2</a></li>
+                    <li><a href="#maine">Maine</a></li>
+                    <li><a href="#maryland">Maryland</a></li>
+                    <li><a href="#massachusetts">Massachusetts</a></li>
+                    <li><a href="#minnesota">Minnesota</a></li>
+                    <li><a href="#missouri">Missouri</a></li>
+                    <li><a href="#montana">Montana</a></li>
+                    <li><a href="#nebraska-cd-2">Nebraska CD-2</a></li>
+                    <li><a href="#nebraska">Nebraska</a></li>
+                    <li><a href="#new-hampshire">New Hampshire</a></li>
+                    <li><a href="#new-jersey">New Jersey</a></li>
+                    <li><a href="#new-mexico">New Mexico</a></li>
+                    <li><a href="#new-york">New York</a></li>
+                    <li><a href="#north-dakota">North Dakota</a></li>
+                    <li><a href="#ohio">Ohio</a></li>
+                    <li><a href="#oklahoma">Oklahoma</a></li>
+                    <li><a href="#oregon">Oregon</a></li>
+                    <li><a href="#rhode-island">Rhode Island</a></li>
+                    <li><a href="#south-carolina">South Carolina</a></li>
+                    <li><a href="#tennessee">Tennessee</a></li>
+                    <li><a href="#texas">Texas</a></li>
+                    <li><a href="#utah">Utah</a></li>
+                    <li><a href="#vermont">Vermont</a></li>
+                    <li><a href="#virginia">Virginia</a></li>
+                    <li><a href="#washington">Washington</a></li>
+                    <li><a href="#west-virginia">West Virginia</a></li>
+                </ul>
+            </div>
+
+            <!-- National Polling Average Image -->
+            <div class="image-container">
+                <h2>Who's favored to win each state?</h2>
+                <img id="ec_votes" src="./v1_images/ec_map.png" alt="National" width="800vw" height="650vh" />
+            </div>
+
+        </div>
+
+        <!-- Swing States Images -->
+        <h2 id="national">Popular Vote</h2>
+        <img src="./v1_images/National.png" alt="National" width="800vw" height="600vh" />
+        <h2>Swing States</h2>
+        <img id="pennsylvania" src="./v1_images/pennsylvania.png" alt="Pennsylvania" width="800vw" height="600vh" />
+        <img id="michigan" src="./v1_images/michigan.png" alt="Michigan" width="800vw" height="600vh" />
+        <img id="wisconsin" src="./v1_images/wisconsin.png" alt="Wisconsin" width="800vw" height="600vh" />
+        <img id="arizona" src="./v1_images/arizona.png" alt="Arizona" width="800vw" height="600vh" />
+        <img id="georgia" src="./v1_images/georgia.png" alt="Georgia" width="800vw" height="600vh" />
+        <img id="north-carolina" src="./v1_images/north carolina.png" alt="North Carolina" width="800vw" height="600vh" />
+        <img id="nevada" src="./v1_images/nevada.png" alt="Nevada" width="800vw" height="600vh" />
+
+        <!-- Remaining States Images -->
+        <h2>Remaining States</h2>
+        <img id="alaska" src="./v1_images/alaska.png" alt="Alaska" width="800vw" height="600vh" />
+        <img id="california" src="./v1_images/california.png" alt="California" width="800vw" height="600vh" />
+        <img id="colorado" src="./v1_images/colorado.png" alt="Colorado" width="800vw" height="600vh" />
+        <img id="delaware" src="./v1_images/delaware.png" alt="Delaware" width="800vw" height="600vh" />
+        <img id="florida" src="./v1_images/florida.png" alt="Florida" width="800vw" height="600vh" />
+        <img id="illinois" src="./v1_images/illinois.png" alt="Illinois" width="800vw" height="600vh" />
+        <img id="indiana" src="./v1_images/indiana.png" alt="Indiana" width="800vw" height="600vh" />
+        <img id="iowa" src="./v1_images/iowa.png" alt="Iowa" width="800vw" height="600vh" />
+        <img id="maine-cd-1" src="./v1_images/maine cd-1.png" alt="Maine CD-1" width="800vw" height="600vh" />
+        <img id="maine-cd-2" src="./v1_images/maine cd-2.png" alt="Maine CD-2" width="800vw" height="600vh" />
+        <img id="maine" src="./v1_images/maine.png" alt="Maine" width="800vw" height="600vh" />
+        <img id="maryland" src="./v1_images/maryland.png" alt="Maryland" width="800vw" height="600vh" />
+        <img id="massachusetts" src="./v1_images/massachusetts.png" alt="Massachusetts" width="800vw" height="600vh" />
+        <img id="minnesota" src="./v1_images/minnesota.png" alt="Minnesota" width="800vw" height="600vh" />
+        <img id="missouri" src="./v1_images/missouri.png" alt="Missouri" width="800vw" height="600vh" />
+        <img id="montana" src="./v1_images/montana.png" alt="Montana" width="800vw" height="600vh" />
+        <img id="nebraska-cd-2" src="./v1_images/nebraska cd-2.png" alt="Nebraska CD-2" width="800vw" height="600vh" />
+        <img id="nebraska" src="./v1_images/nebraska.png" alt="Nebraska" width="800vw" height="600vh" />
+        <img id="new-hampshire" src="./v1_images/new hampshire.png" alt="New Hampshire" width="800vw" height="600vh" />
+        <img id="new-jersey" src="./v1_images/new jersey.png" alt="New Jersey" width="800vw" height="600vh" />
+        <img id="new-mexico" src="./v1_images/new mexico.png" alt="New Mexico" width="800vw" height="600vh" />
+        <img id="new-york" src="./v1_images/new york.png" alt="New York" width="800vw" height="600vh" />
+        <img id="north-dakota" src="./v1_images/north dakota.png" alt="North Dakota" width="800vw" height="600vh" />
+        <img id="ohio" src="./v1_images/ohio.png" alt="Ohio" width="800vw" height="600vh" />
+        <img id="oklahoma" src="./v1_images/oklahoma.png" alt="Oklahoma" width="800vw" height="600vh" />
+        <img id="oregon" src="./v1_images/oregon.png" alt="Oregon" width="800vw" height="600vh" />
+        <img id="rhode-island" src="./v1_images/rhode island.png" alt="Rhode Island" width="800vw" height="600vh" />
+        <img id="south-carolina" src="./v1_images/south carolina.png" alt="South Carolina" width="800vw" height="600vh" />
+        <img id="tennessee" src="./v1_images/tennessee.png" alt="Tennessee" width="800vw" height="600vh" />
+        <img id="texas" src="./v1_images/texas.png" alt="Texas" width="800vw" height="600vh" />
+        <img id="utah" src="./v1_images/utah.png" alt="Utah" width="800vw" height="600vh" />
+        <img id="vermont" src="./v1_images/vermont.png" alt="Vermont" width="800vw" height="600vh" />
+        <img id="virginia" src="./v1_images/virginia.png" alt="Virginia" width="800vw" height="600vh" />
+        <img id="washington" src="./v1_images/washington.png" alt="Washington" width="800vw" height="600vh" />
+        <img id="west-virginia" src="./v1_images/west virginia.png" alt="West Virginia" width="800vw" height="600vh" />
 
     </body>
 </html>
