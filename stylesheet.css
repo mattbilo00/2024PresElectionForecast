@@ -1,111 +1,120 @@
-/* styles.css */
-body {
+body{
     background-color: #f0f0f0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding-top: 5vh;
     font-family: Rubik;
 }
 
-h1 {
+.title {
     color: #000;
     text-align: center;
     font-family: "Rubik Mono One";
-    font-size: 3em;
-    font-weight: 400;
-    width: 90vw;
-    margin-bottom: 0.1em;
+    font-size: 2.5rem;
+    width: 100 vh;
 }
 
-h2 {
-    margin-bottom: 0;
-}
-
-img {
-    margin-top: 0;
-}
-
-p#last-updated {
-    font-family: Rubik;
-    font-size: 1em;
-    color: #9a9a9a;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 0.01em;
-}
-
-p#name {
-    color: #9a9a9a;
-    font-size: 1em;
-    margin-bottom: 0.1em;
-}
-
-select {
-    font-size: 1.5vw; /* Adjust font size of the dropdown */
-    margin-top: 0.5vh; /* Space above the dropdown */
-    background: transparent; /* Make the background transparent */
-    border: 1px solid #ccc; /* Add a border to the dropdown */
-    border-radius: 0.5em; /* Rounded corners for the dropdown */
-    direction: rtl;
-    text-align: left;
-}
-
-label {
-    font-size: 1.5em;
-    margin-top: 1vh;
-}
-
-#map {
-    height: 50vh;
-    width: 100%;
-    margin-top: 2vh;
-}
-
-#model-lst {
-    font-size: 1.3em;
+.author,
+.last-updated {
+    font-size: 1rem;
+    color: #909090;
     text-align: center;
+}
+
+.author {
+    padding-top: 1rem;
+}
+
+.head-container {
+    display: grid;
+    padding: 20px;
+    padding-top: 4rem;
 }
 
 .content-container {
-    display: flex;          /* Create a flex container */
-    width: 90vw;           /* Set a specific width for the container */
-    margin: 0 auto;        /* Center the container */
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    align-items: start;
+    padding-right: 17.5rem;
+    padding-left: 1rem
 }
 
-.table-of-contents {
-    flex: 0 0 200px;       /* Fixed width for the TOC */
-    margin-right: 20px;    /* Space between TOC and image */
-    text-align: left;      /* Left-align text in the TOC */
+.ec-container {
+    justify-items: center;
 }
 
-.image-container {
-    flex: 1;               /* Takes up remaining space */
+html {
+    scroll-behavior: smooth;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c4bfc6;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top span {
+    color: #000000;
+    font-size: 2rem;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+    background-color: #8d8b8d;
+}
+
+.back-to-top:hover span {
+    transform: translateY(-3px);
 }
 
 .table-of-contents ul {
-    list-style-type: none; /* Removes bullets */
-    padding-left: 0;      /* Removes default padding */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 0.9rem;
 }
 
 .table-of-contents li {
-    margin: 10px 0;       /* Adds some spacing between items */
+    margin-bottom: 0.3rem; /* Optional: add space between items */
 }
 
 .table-of-contents a {
-    text-decoration: none; /* Removes underline from links */
-    color: black;         /* Link color */
-    text-align: left;     /* Left-align text for links */
+    text-decoration: none;
+    color: black;
 }
 
 .table-of-contents a:hover {
-    text-decoration: underline; /* Underline on hover for clarity */
+    text-decoration: underline;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
+.toc-strong {
+    margin-top: 1rem;
+}
+
+#ec_votes{
+    width: 60vw;
+    height: auto;
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.img-container h2 {
+    margin: 0; /* Remove default margin for headings */
+    font-size: 24px; /* Set a font size for headings */
+}
+
+.img-container img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
 }
