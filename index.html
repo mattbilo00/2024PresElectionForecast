@@ -3,23 +3,25 @@
         <meta charset='utf-8'>
         <meta name="viewport" content='width=device-width, initial-scale=1.0'>
         <link rel="stylesheet" href="stylesheet.css">
-        <script src="myscripts.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
         <link rel="icon" type="image/png" href="webpage_icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 
         <title>2024 Election Forecast</title>
     </head>
     <body>
         <div class="head-container">
-            <div class="title">2024 US Presidential Election Forecast</div>
+            <div class="title" id="titlehead">2024 US Presidential Election Forecast</div>
             <div class="author">By Matthew Bilopavlovic</div>
-            <div class="last-updated">Last Updated: 28-10-2024, 10:30 PM</div>
+            <div class="last-updated" id="last-updated">Last Updated: 30-10-2024, 12:51 AM</div>
+            <a class="social-link" href="https://github.com/mattbilo00/2024PresElectionForecast" target="_blank"><div id="github">GitHub</div></a>
         </div>
 
         <div class="content-container">
             <!-- Table of Contents -->
             <div class="table-of-contents">
                 <ul>
+                    <li><strong>Pick a State</strong></li>
                     <li><a href="#national" id="pop-vote-toc">Popular Vote</a></li>
                     <li class="toc-strong"><strong>Swing States</strong></li>
                     <li><a href="#pennsylvania">Pennsylvania</a></li>
@@ -73,7 +75,14 @@
             <!-- National Polling Average Image -->
             <div class="ec-container">
                 <h2 id="ec_title">Who's favored to win each state?</h2>
-                <img id="ec_votes" src="./v1_images/ec_map.png" alt="National"/>
+
+                <!-- <picture>
+                    <source media="(min-width: 900px)" srcset="./v1_images/ec_map.png">
+                    <img src="./v1_images/ec_map_small.png">
+                </picture> -->
+                <img id="ec_votes" src="./v1_images/ec_map.png" srcset="./v1_images/ec_map_small.png 500w, ./v1_images/ec_map.png 900w" 
+                sizes="(max-width: 900px) 100vw" 
+                alt="National"/>
             </div>
         </div>
 

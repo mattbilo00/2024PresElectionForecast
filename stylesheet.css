@@ -1,6 +1,20 @@
+
+
+
 body{
     background-color: #f0f0f0;
     font-family: Rubik;
+}
+
+#github {
+    text-decoration: none;
+    text-align: center;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #000;
+    padding-top: 0.7rem;
 }
 
 .title {
@@ -31,9 +45,6 @@ body{
 .content-container {
     display: grid;
     grid-template-columns: 25% 1fr;
-    align-items: start;
-    padding-right: 17.5rem;
-    padding-left: 1rem
 }
 
 .ec-container {
@@ -74,7 +85,6 @@ html {
 
 .table-of-contents ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
     padding-top: 0.9rem;
 }
@@ -117,4 +127,30 @@ html {
 .img-container img {
     max-width: 100%; /* Ensure images are responsive */
     height: auto; /* Maintain aspect ratio */
+}
+
+@media screen and (max-width: 900px) {
+    .content-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .ec-container {
+        order: 1;
+    }
+
+    .table-of-contents {
+        order: 2;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    #ec_title {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
 }
