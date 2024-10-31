@@ -14,6 +14,7 @@
             <div class="title" id="titlehead">2024 US Presidential Election Forecast</div>
             <div class="author">By Matthew Bilopavlovic</div>
             <div class="last-updated" id="last-updated">Last Updated: 30-10-2024, 12:51 AM</div>
+            <a id="method-v1" href="v1_methedology.html">Methodology</a>
             <a class="social-link" href="https://github.com/mattbilo00/2024PresElectionForecast" target="_blank"><div id="github">GitHub</div></a>
         </div>
 
@@ -76,13 +77,11 @@
             <div class="ec-container">
                 <h2 id="ec_title">Who's favored to win each state?</h2>
 
-                <!-- <picture>
-                    <source media="(min-width: 900px)" srcset="./v1_images/ec_map.png">
-                    <img src="./v1_images/ec_map_small.png">
-                </picture> -->
-                <img id="ec_votes" src="./v1_images/ec_map.png" srcset="./v1_images/ec_map_small.png 500w, ./v1_images/ec_map.png 900w" 
-                sizes="(max-width: 900px) 100vw" 
-                alt="National"/>
+                <picture id="ec-image">
+                    <source media="(min-width:1000px)" srcset="./v1_images/ec_map.png">
+                    <source srcset="./v1_images/ec_map_small.png">
+                    <img id="ec_votes" src="./v1_images/ec_map.png" alt="National polling leads by state"/>
+                </picture>
             </div>
         </div>
 

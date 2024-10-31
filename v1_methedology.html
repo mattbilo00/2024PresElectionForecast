@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Forecast Methodology</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="webpage_icon.png">
+</head>
+<body>
+
+    <h1>Election Forecast Methodology</h1>
+
+    <a id="back-button" href="index.html">Back to the forecast</a>
+
+    <p>I first needed to create a state lean for each state based on <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/42MVDX" target="_blank" class="method-link">presidential election results</a> by state dating back to 1976. From this, I calculate the two-party share of 
+        the vote and determine the percentage gap in the vote share, both for individual states and the national aggregate, using this formula:</p>
+    
+    <div class="formula">
+        \[\text{% Gap} = \text{% Dem - % GOP}\]
+    </div>
+
+    <p>Subsequently, I defined the lean for a state in a given year as follows:</p>
+    
+    <div class="formula">
+        \[\text{State lean} = \text{State % gap - Country % gap}\]
+    </div>
+
+    <p>To compute each state’s partisan lean for the 2020 election, I used an Exponentially Weighted Moving Average (EWMA). <a href="https://github.com/mattbilo00/2024PresElectionForecast/tree/main/data" target="_blank" class="method-link">Final lean values can be found here at my GitHub</a>.</p>
+
+    <p>The forecasting process consists of approximately 2,200 iterations for each state, applying various model weights. These weights are determined by the relative importance of
+        national versus state-level polls, as well as the alpha values used in EWMAs for polling averages and polling counts.</p>
+
+    <p>Initially, I assign a weight to each poll based on the square root of its sample size. This is to emphasize diminishing return on poll accuracy as the sample size increases:</p>
+    
+    <div class="formula">
+        \[\text{Poll Weight} = \frac{\sqrt{\text{Sample size}}}{\sqrt{\text{Median sample size}}}\]
+    </div>
+
+    <p>I then compute the average of all polls conducted on a given day based on these weights. I then applied an EWMA to calculate the ongoing daily average of polls.</p>
+
+    <p>Next, I wanted to incorporate the influence of national polls on state level polling, so I created an EWMA to create an ongoing weight value for the count of state-level polls.
+    For instance, having three state polls conducted yesterday is more indicative of state sentiment than a single national poll conducted today, so the state polls should be weighted 
+    more heavily in the polling EWMA.</p>
+
+    <p>To translate national polling split into a state level split, I used the following formulas:</p>
+
+    <div class="formula">
+        \[\text{Dem lean factor} = 1 + \frac{\text{state lean}}{100}\]
+    </div>
+
+    <div class="formula">
+        \[\text{GOP lean factor} = 1 - \frac{\text{state lean}}{100}\]
+    </div>
+
+    <div class="formula">
+        \[\text{Candidate split} = \text{State lean factor} \times \text{National split}\]
+    </div>
+
+    <p>Finally, I computed the final average percentage for a particular candidate in a state using the following:</p>
+
+    <div class="formula">
+        \[\text{Final %} = (\text{state % } \times \text{poll weight}) + (\text{candidate split} \times (1 - \text{poll weight}))\]
+    </div>
+
+</body>
+</html>

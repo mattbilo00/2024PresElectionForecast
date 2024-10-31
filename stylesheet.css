@@ -6,15 +6,45 @@ body{
     font-family: Rubik;
 }
 
-#github {
+#github, 
+#method-v1 {
     text-decoration: none;
     text-align: center;
+    color: #000;
+    padding-top: 0.7rem;
+}
+
+.method-link {
+    color: #000;
+}
+
+#github:hover, 
+#method-v1:hover {
+    text-decoration: underline;
+}
+
+#back-button {
+    background-color: transparent; /* No background color */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Make it an inline-block */
+    font-size: 16px; /* Font size */
+    border: 2px solid black; /* Black outline */
+    border-radius: 8px; /* Slightly round the edges */
+    cursor: pointer; /* Change cursor on hover */
+    line-height: 1;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#back-button:hover { 
+    background-color: #adadad;
+    transform: translateY(-3px);
 }
 
 .social-link {
     text-decoration: none;
-    color: #000;
-    padding-top: 0.7rem;
 }
 
 .title {
@@ -109,6 +139,10 @@ html {
 #ec_votes{
     width: 60vw;
     height: auto;
+}
+
+#ec-image {
+    width: 100vw
 }
 
 .img-container {
